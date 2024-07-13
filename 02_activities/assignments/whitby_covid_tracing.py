@@ -13,11 +13,12 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Constants representing the parameters of the model
-ATTACK_RATE = 0.10
-TRACE_SUCCESS = 0.20
-SECONDARY_TRACE_THRESHOLD = 2
+ATTACK_RATE = 0.10 # Assume each person has a 10% chance of being infected 
+TRACE_SUCCESS = 0.20 # Percentage of successfully tracing an infected individual
+SECONDARY_TRACE_THRESHOLD = 2 # Threshold value to carry out a secondary contact tracing in an event
+RANDOM_SEED = 10 # Random seed for reuseability
 
-def simulate_event(m):
+def simulate_event(random_state, m):
   """
   Simulates the infection and tracing process for a series of events.
   
@@ -25,15 +26,19 @@ def simulate_event(m):
   infects a subset of them based on the ATTACK_RATE, performs primary and secondary contact tracing,
   and calculates the proportions of infections and traced cases that are attributed to weddings.
   
-  Parameters:
-  - m: Dummy parameter for iteration purposes.
-  
-  Returns:
-  - A tuple containing the proportion of infections and the proportion of traced cases
-    that are attributed to weddings.
+  ''' Parameters:
+  - random_state: A random state parameter for reproducibility.
+  - m: Dummy parameter for iteration purposes. '''
+
   """
-  # Create DataFrame for people at events with initial infection and traced status
+  
+  '''Assume a community with 1000 people, and a single time period. In that time period, every person attends exactly one event.
+  - wedding: accounting for 200 people total
+  - brunch: accounting for 800 people total'''
+  
   events = ['wedding'] * 200 + ['brunch'] * 800
+  
+  # Create DataFrame for people at events with initial infection and traced status NaN
   ppl = pd.DataFrame({
       'event': events,
       'infected': False,
@@ -44,11 +49,11 @@ def simulate_event(m):
   ppl['traced'] = ppl['traced'].astype(pd.BooleanDtype())
 
   # Infect a random subset of people
-  infected_indices = np.random.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)
+  infected_indices = random_state.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)
   ppl.loc[infected_indices, 'infected'] = True
 
   # Primary contact tracing: randomly decide which infected people get traced
-  ppl.loc[ppl['infected'], 'traced'] = np.random.rand(sum(ppl['infected'])) < TRACE_SUCCESS
+  ppl.loc[ppl['infected'], 'traced'] = random_state.rand(sum(ppl['infected'])) < TRACE_SUCCESS
 
   # Secondary contact tracing based on event attendance
   event_trace_counts = ppl[ppl['traced'] == True]['event'].value_counts()
@@ -64,20 +69,29 @@ def simulate_event(m):
   wedding_traces = sum(ppl['infected'] & ppl['traced'] & (ppl['event_type'] == 'w'))
   brunch_traces = sum(ppl['infected'] & ppl['traced'] & (ppl['event_type'] == 'b'))
   p_wedding_traces = wedding_traces / (wedding_traces + brunch_traces)
+  
+  '''Returns:
+  - A tuple containing the proportion of infections and the proportion of traced cases
+    that are attributed to weddings.'''
 
   return p_wedding_infections, p_wedding_traces
 
 # Set the random seed for reproducibility
-np.random.seed(10)
+random_state = np.random.RandomState(RANDOM_SEED)
 
 # Run the simulation 1000 times
-results = [simulate_event(m) for m in range(1000)]
+results = [simulate_event(random_state,m) for m in range(1000)]
 props_df = pd.DataFrame(results, columns=["Infections", "Traces"])
 
 # Plotting the results
 plt.figure(figsize=(10, 6))
+
+# Histogram of Initial infections
 sns.histplot(props_df['Infections'], color="blue", alpha=0.75, binwidth=0.05, kde=False, label='Infections from Weddings')
+
+# Histogram of Primary contact traces
 sns.histplot(props_df['Traces'], color="red", alpha=0.75, binwidth=0.05, kde=False, label='Traced to Weddings')
+
 plt.xlabel("Proportion of cases")
 plt.ylabel("Frequency")
 plt.title("Impact of Contact Tracing on Perceived Infection Sources")
