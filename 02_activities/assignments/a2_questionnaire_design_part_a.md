@@ -16,30 +16,63 @@ Select one of the scenarios below and design a survey to meet the need(s) outlin
 
 # Your Changes
 
-The number of your chosen topic: `#`
+The number of your chosen topic: `1`
 
 Describe the purpose of your survey:
 ```
-write your answer here...
+The purpose of this survey is to find, 
+ - reasons for high turnover rate among entry and lower-level employees
+ - what changes need to occur to improve employee satisfaction
+
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
-write your answer here...
+*Target population : All current and former entry and lower-level employees who have left this tech company within the past six months. 
+
+*Sampling frame : List of all current and former entry and lower-level employees who have left this tech company within the past six months. 
+
+*Sampling unit : An employee selected from the above sampling frame
+
+*Overall sampling starategy -  
+Stratified random sampling procedure is used.
+1.Get a List of all current and former entry and lower-level employees who have left this tech company within the past six months. 
+2.Divide the list based on department, gender and tenure
+3.Decide a sample size 
+4.Based on the sample size allocate weights for the above strata 
+5.According to the weights randomly pick employees from each strata and create a sample population 
 ```
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
+1. What is your Department?
+A. Human Resources  B. Finance and Accounting  C. Marketing  D.IT   E. Operations or Production
+
+2. What is your job title?
+
+3. What is your gender
+A. Woman     B. Man   C. Non-binary   D. Transgender  E. Prefer not to say    F. Other (please specify)
+
+4. How long have you been employed?
+A. less than 1 year   B. 1 - 2 years  C. 2 - 5 years  D. more than 5 years
+
+5. How satisfied are/were you with your compensation and benefits? 
+A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+6. How satisfied are/were you with your overall job experience?
+A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+7. How satisfied are/were you about the hybrid work setting?
+A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+8. How would you rate the company culture?
+A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+9. Do you find your work challenging?
+A. Yes  B. No   C. Other (please specify)
+
+10. What could the company do to improve the employee experience for entry- and lower-level employees?
+
 ```
 
 ## Rubric
