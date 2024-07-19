@@ -23,7 +23,7 @@
 
 2. Given the class content (error, survey quality, ethics) covered since Part A of the assignment, do you wish to make any changes to your original survey? If so, make a copy of your original survey and make any desired changes. Describe the changes and your reasoning. Provide a link here for submission.
 
-    ```
+```
  1. What is your Department?
     A. Human Resources  B. Finance and Accounting  C. Marketing  D.IT   E. Operations or Production
 
@@ -59,7 +59,7 @@
    * For question no. 9 more options would be added
 
    Link for updated questionnaire - https://forms.gle/DnYsSQZeGxvmXWjF6
-    ```
+```
 
 3. Could the purpose of your survey have been fulfilled through an observational study? If yes, how? If no, why not?
 
