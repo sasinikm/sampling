@@ -4,19 +4,71 @@
 1. Comment on the quality of your sample. Do you expect it to be representative of your target population? Why or why not?
 
     ```
-    write your answer here...
+   *Target population of assignment-2: All current and former entry and lower-level employees who have 
+   left this tech company within the past six months.
+
+   Stratified random sampling procedure used for assignment-2
+    1.Get a List of all current and former entry and lower-level employees who have left this tech company 
+    within the past six months. 
+    2.Divide the list based on department, gender and tenure
+    3.Decide a sample size 
+    4.Based on the sample size allocate weights for the above strata 
+    5.According to the weights randomly pick employees from each strata and create a sample population 
+
+   The sample used in this study is representative as stratified random sampling technique is used. But the quality of the sample used in assignment-2 can be improved by adding  Type of position (entry/lower-level) as strata which is one of the main characteristics of the required data. If this strata is missing, the sample we are using is selection bias and it might produce coverage error.
+   
+   Hence to improve the quality of the sample, Type of position (entry/lower-level) is included and random samples are selected from each strata(Type of position,department,gender and tenure) based on the assigned weights.
+
     ```
 
 2. Given the class content (error, survey quality, ethics) covered since Part A of the assignment, do you wish to make any changes to your original survey? If so, make a copy of your original survey and make any desired changes. Describe the changes and your reasoning. Provide a link here for submission.
 
-    ```
-    write your answer here...
-    ```
+```
+ 1. What is your Department?
+    A. Human Resources  B. Finance and Accounting  C. Marketing  D.IT   E. Operations or Production
+
+ 2. What is your job title?
+
+ 3. What is your gender
+    A. Woman     B. Man   C. Non-binary   D. Transgender  E. Prefer not to say    F. Other (please specify)
+
+ 4. How long have you been employed?
+    A. less than 1 year   B. 1 - 2 years  C. 2 - 5 years  D. more than 5 years
+
+ 5. How satisfied are/were you with your compensation and benefits? 
+    A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+ 6. How satisfied are/were you with your overall job experience?
+    A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+ 7. How satisfied are/were you about the hybrid work setting?
+    A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+ 8. How would you rate the company culture?
+    A.  Strongly satisified   B. Satisfied C. Neither satisfied nor dissatisfied  D. Dissatisfied  E. Strongly Dissatisfied
+
+ 9. Do you find your work challenging?
+    A. Yes  B. No   C. Other (please specify)
+
+ 10. What could the company do to improve the employee experience for entry- and lower-level employees?
+
+   Yes I would make changes to the survey questionnaire.
+   * Instructions for the survey would be added on top
+   * Question to record experience level (Internship/Entry-level/Associate) would be added
+   * Question 5 would be changed as it is a double barrel question 
+   * For question no. 9 more options would be added
+
+   Link for updated questionnaire - https://forms.gle/DnYsSQZeGxvmXWjF6
+```
 
 3. Could the purpose of your survey have been fulfilled through an observational study? If yes, how? If no, why not?
 
     ```
-    write your answer here...
+   No the purpose of the survey could not be fullfilled by an observational study.
+   Some of the data required for the analysis such as employee department,gender,tenure,experience level could be 
+   collected from HR records. But data about employee's opinion on job experience, compensation, hybrid work setting,
+   company culture and their feedback on how to improve emplyee experience need to be collected via a survey.
+
     ```
 
 ## Why am I doing this assignment?
